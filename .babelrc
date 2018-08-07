@@ -1,0 +1,21 @@
+// This .babelrc is for react-native, webpack server, and gulpfile.babel.js.
+// Browser babel configuration is in ./webpack/makeConfig.js.
+// Server .babelrc is in ./src/server directory.
+// https://github.com/facebook/react-native/tree/master/babel-preset
+{
+  "presets": ["react-native"],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-react-constant-elements",
+    "transform-function-bind",
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-react-constant-elements",
+        "transform-function-bind",
+      ]
+    }
+  }
+}
